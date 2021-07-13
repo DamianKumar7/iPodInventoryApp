@@ -42,7 +42,7 @@ public class IpodOrderCalculator {
         }
         return minimumCost(unitsOrdered, countryWhichOrdered, countryWhichShips);
     }
-    public String finalBillTransaction() throws InvalidOrderSizeExeption, OrderedAmountExceedsStocksException {
+    public String getFinalBill() throws InvalidOrderSizeExeption, OrderedAmountExceedsStocksException {
         StringBuilder invoice = new StringBuilder();
         invoice.append(calculateOrderCost()).append(":").append(brazil.getStocks()).append(":").append(argentina.getStocks());
         return invoice.toString();

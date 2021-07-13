@@ -30,7 +30,7 @@ class IpodOrderCalculatorTest {
     @Test
     void shouldReturnInvoiceOnSuccessfulOrder() throws InvalidOrderSizeExeption, InvalidCountryNameException, OrderedAmountExceedsStocksException {
         IpodOrderCalculator newOrder = new IpodOrderCalculator("Brazil",50);
-        String invoice = newOrder.finalBillTransaction();
+        String invoice = newOrder.getFinalBill();
         assertEquals("4500:100:50",invoice);
     }
 }
